@@ -56,7 +56,8 @@ body {
     width: 100%;
     position: relative;
     display: flex;
-    padding: 2rem;
+    /* 4vh on top/bottom, and a very tight 2vw on the left/right */
+    padding: 4vh 2vw; 
     overflow: hidden;
 }
 
@@ -66,24 +67,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0; 
+    padding: 0 !important; /* Forces the red to the absolute edge */
 }
 
 .knockout-text {
     font-family: var(--font-header);
-    font-size: clamp(6rem, 20vw, 18rem);
-    line-height: 0.8;
+    
+    /* Increased from 25vw. This forces the text wider to hug the screen edges. 
+       If it causes a horizontal scrollbar, dial this back to 27vw or 28vw. */
+    font-size: 29vw; 
+    
+    /* Increased from 0.8. This adds the exact vertical spacing between DOUBLE and FRAME. 
+       Adjust up to 1.0 if you need even more room. */
+    line-height: 0.95; 
+    
     text-transform: uppercase;
     text-align: center;
     margin: 0;
+    white-space: nowrap; 
     
-    /* The Magic: This puts your photo inside the text */
-    background-color: #121212; /* Fallback if image doesn't load */
+    background-color: #121212; 
     background-image: url('images/hero-bg.jpg'); 
     background-size: cover;
     background-position: center;
     
-    /* Clips the image to the shape of the letters */
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; 
