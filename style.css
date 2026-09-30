@@ -43,8 +43,8 @@ body {
 .massive-text {
     font-family: var(--font-header);
     font-size: clamp(5rem, 15vw, 12rem);
-    line-height: 0.85;
-    letter-spacing: -0.02em;
+    line-height: 0.9; /* Slightly looser leading */
+    letter-spacing: 0.04em; /* Adds breathing room between letters */
     text-transform: uppercase;
     margin: 0;
 }
@@ -81,16 +81,16 @@ body {
 
 .knockout-text {
     font-family: var(--font-header);
-    font-size: 29vw; 
+    font-size: 22vw; /* Scaled down from 29vw */
     line-height: 0.95; 
+    letter-spacing: 0.02em; /* Prevents the knockout text from gluing together */
     text-transform: uppercase;
     text-align: center;
     margin: 0;
     white-space: nowrap; 
     
-    /* Image Cutout Magic */
     background-color: #121212; 
-    background-image: url('./images/hero-bg.webp'); 
+    background-image: url('./images/hero-bg.jpg'); 
     background-size: cover;
     background-position: center;
     
