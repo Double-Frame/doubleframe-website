@@ -87,7 +87,7 @@ body {
     white-space: nowrap; 
     
     background-color: #121212; 
-    background-image: url('images/hero-bg.jpg'); 
+    background-image: url('./images/hero-bg.jpg'); 
     background-size: cover;
     background-position: center;
     
