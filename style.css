@@ -60,32 +60,13 @@ body {
     overflow: hidden;
 }
 
-/* --- HERO KNOCKOUT EFFECT --- */
+/* --- HERO KNOCKOUT EFFECT (FIXED) --- */
 #hero {
-    padding: 0; /* Remove padding so background is flush */
-}
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    z-index: 1;
-}
-
-.hero-knockout-wrapper {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
+    background-color: var(--accent-red); 
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--accent-red); 
-    mix-blend-mode: multiply; 
+    padding: 0; 
 }
 
 .knockout-text {
@@ -94,8 +75,18 @@ body {
     line-height: 0.8;
     text-transform: uppercase;
     text-align: center;
-    color: #000000; 
     margin: 0;
+    
+    /* The Magic: This puts your photo inside the text */
+    background-color: #121212; /* Fallback if image doesn't load */
+    background-image: url('images/hero-bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    
+    /* Clips the image to the shape of the letters */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
 }
 
 /* --- FEATURED WORK --- */
