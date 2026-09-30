@@ -90,7 +90,7 @@ body {
     
     /* Image Cutout Magic */
     background-color: #121212; 
-    background-image: url('./images/hero-bg.jpg'); 
+    background-image: url('./images/hero-bg.webp'); 
     background-size: cover;
     background-position: center;
     
