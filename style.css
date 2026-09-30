@@ -1,3 +1,9 @@
+/* --- SCROLL SNAPPING --- */
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; 
+}
+
 /* --- VARIABLES --- */
 :root {
     --bg-charcoal: #121212;
@@ -21,7 +27,7 @@ body {
     background-color: var(--bg-charcoal);
     color: var(--text-white);
     font-family: var(--font-meta);
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 /* --- UTILITY CLASSES --- */
@@ -56,36 +62,33 @@ body {
     width: 100%;
     position: relative;
     display: flex;
-    /* 4vh on top/bottom, and a very tight 2vw on the left/right */
     padding: 4vh 2vw; 
     overflow: hidden;
+    
+    /* Scroll Snapping */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
-/* --- HERO KNOCKOUT EFFECT (FIXED) --- */
+/* --- HERO KNOCKOUT EFFECT --- */
 #hero {
     background-color: var(--accent-red); 
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 !important; /* Forces the red to the absolute edge */
+    padding: 0 !important; 
 }
 
 .knockout-text {
     font-family: var(--font-header);
-    
-    /* Increased from 25vw. This forces the text wider to hug the screen edges. 
-       If it causes a horizontal scrollbar, dial this back to 27vw or 28vw. */
     font-size: 29vw; 
-    
-    /* Increased from 0.8. This adds the exact vertical spacing between DOUBLE and FRAME. 
-       Adjust up to 1.0 if you need even more room. */
     line-height: 0.95; 
-    
     text-transform: uppercase;
     text-align: center;
     margin: 0;
     white-space: nowrap; 
     
+    /* Image Cutout Magic */
     background-color: #121212; 
     background-image: url('./images/hero-bg.jpg'); 
     background-size: cover;
@@ -153,5 +156,8 @@ body {
         writing-mode: horizontal-tb;
         transform: none;
         margin-bottom: 2rem;
+    }
+    .knockout-text {
+        font-size: 32vw; /* Ensures text stays massive on mobile */
     }
 }
