@@ -19,18 +19,9 @@
         <h1 class="knockout-text">DOUBLE<br>FRAME</h1>
     </header>
 
-    <!-- FEATURED WORK: Lookbook spreads -->
-    <section id="work" class="bg-red poster-screen">
-        <div class="layout-grid">
-            <div class="col-text">
-                <h2 class="massive-text txt-charcoal sideways-text">COLLABS</h2>
-            </div>
-            <div class="col-media">
-                <img src="images/project1.jpg" alt="Featured Work" class="project-img">
-                <p class="metadata txt-white mt-1">01 // COMMERCIAL WORK — 2026</p>
-            </div>
-        </div>
-    </section>
+    <!-- DYNAMIC COLLABS CONTAINER -->
+    <!-- app.js will inject the portfolio sections here automatically -->
+    <div id="collabs-container"></div>
 
     <!-- CONTACT / FOOTER -->
     <footer id="contact" class="bg-charcoal poster-screen footer-layout">
@@ -43,5 +34,20 @@
         </div>
     </footer>
 
+    <!-- FULL SCREEN LIGHTBOX -->
+    <div id="lightbox" class="lightbox-overlay hidden">
+        <button class="lightbox-close massive-text txt-white">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Gallery Image">
+        </div>
+        <div class="lightbox-controls massive-text">
+            <button id="lightbox-prev" class="txt-mint">&larr;</button>
+            <button id="lightbox-next" class="txt-mint">&rarr;</button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
