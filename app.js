@@ -22,14 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="col-media">
                 <img src="${collab.heroImage}" alt="${collab.client}" class="project-img cursor-pointer" data-index="${index}">
-                <p class="metadata txt-white mt-1">0${index + 1} // ${collab.client} — ${collab.year}<br>${collab.role} [CLICK TO VIEW]</p>
+                <p class="metadata txt-white mt-1">0${index + 1} // ${collab.client} — ${collab.year}<br> [CLICK TO VIEW]</p>
             </div>
         `;
         
         const contentRight = `
             <div class="col-media">
                 <img src="${collab.heroImage}" alt="${collab.client}" class="project-img cursor-pointer" data-index="${index}">
-                <p class="metadata txt-white mt-1">0${index + 1} // ${collab.client} — ${collab.year}<br>${collab.role} [CLICK TO VIEW]</p>
+                <p class="metadata txt-white mt-1">0${index + 1} // ${collab.client} — ${collab.year}<br> [CLICK TO VIEW]</p>
             </div>
             <div class="col-text" style="text-align: right;">
                 <h2 class="massive-text ${collab.textColor} sideways-text" style="transform: rotate(0deg); writing-mode: vertical-lr;">WORK</h2>
