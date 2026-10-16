@@ -5,6 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Double Frame | Photography & Videography</title>
     
+    <!-- Search Engine SEO -->
+    <meta name="description" content="Double Frame is the creative studio of Gorik, a photographer, videographer, and 3D/VFX artist based in Leuven, Belgium. View the portfolio.">
+    <meta name="author" content="Gorik">
+    <meta name="keywords" content="Photography, Videography, VFX, 3D animation, Event Photographer, Leuven, Belgium, Double Frame">
+
+    <!-- Social Media & iMessage Preview Cards (Open Graph) -->
+    <meta property="og:title" content="Double Frame | Photography & Videography">
+    <meta property="og:description" content="Photography, film, and 3D/VFX by Gorik. Based in Leuven, Belgium.">
+    <meta property="og:image" content="https://doubleframe.be/images/hero-bg.webp">
+    <meta property="og:url" content="https://doubleframe.be">
+    <meta property="og:type" content="website">
+
+    <!-- AI & Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Double Frame",
+      "image": "https://doubleframe.be/images/hero-bg.webp",
+      "description": "Photography, Videography, and 3D/VFX studio.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Leuven",
+        "addressCountry": "BE"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Gorik"
+      },
+      "url": "https://doubleframe.be",
+      "sameAs": [
+        "https://www.instagram.com/doubleframe.be/",
+        "https://doubleframe.myportfolio.com/"
+      ]
+    }
+    </script>
+
     <!-- Google Fonts: Anton (Headers) & Space Mono (Metadata) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +59,32 @@
     <!-- DYNAMIC COLLABS CONTAINER -->
     <!-- app.js will inject the portfolio sections here automatically -->
     <div id="collabs-container"></div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="bg-red poster-screen">
+        <div class="about-grid">
+            
+            <!-- Column 1: Sideways Header -->
+            <div class="col-text" style="display: flex; justify-content: center;">
+                <h2 class="massive-text txt-charcoal sideways-text">HUMAN</h2>
+            </div>
+
+            <!-- Column 2: The Portrait -->
+            <div class="col-media">
+                <img src="images/profile.jpg" alt="Gorik - Double Frame" class="project-img" style="height: 60vh; object-position: top;">
+            </div>
+
+            <!-- Column 3: The Bio -->
+            <div class="col-text about-text">
+                <p>Hello there! I'm Gorik, the human behind Double Frame. Think of it as my creative playground, where photography, film, and 3D/VFX collide in (mostly) happy accidents.</p>
+                <p>I've been on a bit of a visual adventure, from childhood camera escapades to wrangling 3D models & animation, and even sneaking some 'invisible' VFX into a feature film. Turns out, all those random skills actually play surprisingly well together.</p>
+                <p>So, why 'Double Frame'? It's a nod to a VFX technique that slows down footage for that extra bit of cinematic magic. If you're looking for someone who can juggle pixels, light, and stories with a healthy dose of 'wait, that actually worked?', then let's make something happen!</p>
+                <br>
+                <p class="metadata" style="font-weight: 700;">BASED IN LEUVEN, BELGIUM</p>
+            </div>
+            
+        </div>
+    </section>
 
     <!-- CONTACT / FOOTER -->
     <footer id="contact" class="bg-charcoal poster-screen footer-layout">

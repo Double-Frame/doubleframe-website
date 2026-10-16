@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Frame | Links</title>
+    
+    <!-- Search Engine & Social SEO (Basic) -->
+    <meta name="description" content="Links for Double Frame - Photography, Film & VFX by Gorik.">
+    <meta name="author" content="Gorik">
+    <meta property="og:title" content="Double Frame | Links">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Anton & Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-charcoal: #121212;
+            --accent-red: #EE4B46;
+            --accent-mint: #A6FF96;
+            --accent-chartreuse: #D3FF24;
+            --text-white: #F4F4F4;
+
+            --font-header: 'Anton', sans-serif;
+            --font-meta: 'Space Mono', monospace;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-charcoal);
+            color: var(--text-white);
+            font-family: var(--font-meta);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Centers vertically on taller screens */
+            padding: 2rem 1rem;
+        }
+
+        /* Container constrained for mobile/link-in-bio screens */
+        .container {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            width: 100%;
+        }
+
+        h1 {
+            font-family: var(--font-header);
+            font-size: clamp(4rem, 15vw, 6rem); /* Scales beautifully */
+            line-height: 0.9;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            
+            /* Adding a subtle gradient text effect for that premium touch */
+            background: linear-gradient(to bottom, var(--text-white), #999);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .meta {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+            color: var(--text-white);
+            padding: 0 1rem;
+        }
+
+        .meta span {
+            color: var(--accent-mint);
+        }
+
+        /* Links Stacking Container */
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .link-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-family: var(--font-header);
+            font-size: 2rem;
+            color: var(--text-white);
+            background-color: transparent;
+            border: 2px solid var(--text-white);
+            border-radius: 0; /* Strict Brutalist */
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            
+            /* Initial state for slide-up animation */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.6s ease forwards;
+        }
+
+        /* Alternating Hover States for visual rhythm */
+        .link-btn:nth-child(1):hover {
+            background-color: var(--accent-red);
+            border-color: var(--accent-red);
+            color: var(--bg-charcoal);
+        }
+
+        .link-btn:nth-child(2):hover {
+            background-color: var(--accent-chartreuse);
+            border-color: var(--accent-chartreuse);
+            color: var(--bg-charcoal);
+        }
+
+        .link-btn:nth-child(3):hover {
+            background-color: var(--accent-mint);
+            border-color: var(--accent-mint);
+            color: var(--bg-charcoal);
+        }
+
+        .link-btn:nth-child(4):hover {
+            background-color: var(--text-white);
+            border-color: var(--text-white);
+            color: var(--bg-charcoal);
+        }
+
+        /* Staggered Animation Delays */
+        .link-btn:nth-child(1) { animation-delay: 0.1s; }
+        .link-btn:nth-child(2) { animation-delay: 0.2s; }
+        .link-btn:nth-child(3) { animation-delay: 0.3s; }
+        .link-btn:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>DOUBLE<br>FRAME</h1>
+            <p class="meta">GORIK // PHOTOGRAPHY, FILM & VFX // <span>LEUVEN, BE</span></p>
+        </header>
+
+        <nav class="links-container">
+            <a href="/" class="link-btn">MAIN PORTFOLIO</a>
+            <a href="https://doubleframe.myportfolio.com/" target="_blank" class="link-btn">FULL ARCHIVE</a>
+            <a href="https://www.instagram.com/doubleframe.be/" target="_blank" class="link-btn">INSTAGRAM</a>
+            <a href="mailto:gorik@doubleframe.com" class="link-btn">LET'S WORK</a>
+        </nav>
+    </main>
+
+</body>
+</html>
