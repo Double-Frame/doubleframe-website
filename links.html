@@ -157,6 +157,23 @@
                 transform: translateY(0);
             }
         }
+
+        /* Let's Work text swap logic */
+        .lets-work .text-hover {
+            display: none;
+            font-family: var(--font-meta);
+            font-size: 1.1rem; /* Scaled down slightly to fit on mobile */
+            text-transform: lowercase;
+            letter-spacing: 0;
+        }
+        
+        .lets-work:hover .text-default {
+            display: none;
+        }
+        
+        .lets-work:hover .text-hover {
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -168,10 +185,13 @@
         </header>
 
         <nav class="links-container">
-            <a href="https://doubleframe.be" class="link-btn">MAIN PORTFOLIO</a>
+            <a href="/" class="link-btn">MAIN PORTFOLIO</a>
             <a href="https://doubleframe.myportfolio.com/" target="_blank" class="link-btn">FULL ARCHIVE</a>
             <a href="https://www.instagram.com/doubleframe.be/" target="_blank" class="link-btn">INSTAGRAM</a>
-            <a href="mailto:gorik@doubleframe.com" class="link-btn">LET'S WORK</a>
+            <a href="mailto:gorik@doubleframe.be" class="link-btn lets-work">
+                <span class="text-default">LET'S WORK</span>
+                <span class="text-hover">gorik@doubleframe.be</span>
+            </a>
         </nav>
     </main>
 
